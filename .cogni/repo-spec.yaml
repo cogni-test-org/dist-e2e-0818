@@ -16,9 +16,6 @@ scope_key: "default"
 intent:
   name: node-template
 
-cogni_dao:
-  chain_id: "8453" # Base mainnet
-
 # Activity ledger ingestion + approver allowlist.
 # `approvers` gates the `(admin)/` route group and write routes under
 # `/api/v1/attribution/*`. Replace with the fork's DAO-owner wallet(s) when
@@ -57,6 +54,7 @@ gates:
       rule_file: repo-goal-alignment.yaml
 
 governance:
+  chain_id: "8453" # Base mainnet
   token_contract: "0x0166Db3d42603E790Fb685059DcAa37087B032c8"
   emissions_holder: "0x717a747df71111a678202BfCD2E3B0081A9aeB56"
 
